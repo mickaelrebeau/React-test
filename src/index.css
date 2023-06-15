@@ -1,0 +1,29 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.nav-active {
+  text-decoration: underline;
+  color: red;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mike {
+  width: 150px;
+  height: auto;
+}
+
+.card {
+  width: 40rem;
+}
