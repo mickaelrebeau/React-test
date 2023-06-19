@@ -15,7 +15,8 @@ export default function ArticlePage(props: any) {
         event.preventDefault()
 
         handleAddArticle(article)
-        console.log(article);
+        
+        document.querySelector("#form").reset()
     }
 
     function handleChangeArticle(event: any) {
@@ -31,7 +32,7 @@ export default function ArticlePage(props: any) {
             <div className="border border-1 m-auto mt-5 w-75">
                 <div className="p-5">
                     <h2 className="text-center">Ajouter un article</h2>
-                    <form className="d-flex flex-column w-75 m-auto mt-3" onSubmit={(event) => handleSubmitArticle(event)}>
+                    <form className="d-flex flex-column w-75 m-auto mt-3" id="form" onSubmit={(event) => handleSubmitArticle(event)}>
                         <label htmlFor="name" className="mb-2">Nom de l'autheur</label>
         
                         <input className="" type="text" name="name" id="name" onChange={(event) => handleChangeArticle(event)}/>

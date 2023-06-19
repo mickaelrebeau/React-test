@@ -8,7 +8,7 @@ export default function HomePage(props: any) {
         name:"",
         subject:"",
         message:"",
-        date: new Date().toUTCString()
+        date: ""
     })
 
     const dateFormatter = (el: any) => {
@@ -19,7 +19,9 @@ export default function HomePage(props: any) {
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
-        handleAddMessage(message)
+        handleAddMessage(message) 
+
+        document.querySelector("#form").reset()
     }
 
     function handleChange(event: any) {
@@ -62,7 +64,7 @@ export default function HomePage(props: any) {
                     <h2 className="mt-5">Nous contacter</h2>
                     <div className="border border-1 m-auto mt-3">
                         <div className="p-4">
-                            <form className="d-flex flex-column m-auto" onSubmit={(event) => handleSubmit(event)}>
+                            <form className="d-flex flex-column m-auto" id="form" onSubmit={(event) => handleSubmit(event)}>
                                 <label htmlFor="name" className="mb-2">Nom</label>
                 
                                 <input className="" type="text" name="name" id="name" onChange={(event) => handleChange(event)}/>
